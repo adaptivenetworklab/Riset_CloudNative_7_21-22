@@ -24,7 +24,7 @@ helm search repo adaptivenetlab
 ```
 kubectl create ns open5gs
 helm install open5gs adaptivenetlab/open5gs -n open5gs
-helm install open5gs adaptivenetlab/ueransim -n open5gs
+helm install ueransim adaptivenetlab/ueransim -n open5gs
 ```
 
 ## Component Description

@@ -50,6 +50,7 @@ BSF - Binding Support Function
 
 ## Reference 
 ```
+https://github.com/open5gs/open5gs
 https://assyafii.com/docs/5g-cloud-native-simulation-with-open5gs/
 https://github.com/Gradiant/openverso-charts
 https://bitbucket.org/gilangvperdana/opensource-5g-core-service-mesh

@@ -26,6 +26,24 @@ kubectl create ns open5gs
 helm install open5gs adaptivenetlab/open5gs -n open5gs
 helm install ueransim adaptivenetlab/ueransim -n open5gs
 ```
+```
+Ueransim is not recommended to deploy with helm template, cause we must adjust AMF IP POD on GNB manifest.
+You can use manual helm installation mode, with :
+
+git clone https://github.com/Gradiant/openverso-charts.git
+cd openverso-charts/charts/ueransim
+sudo nano values.yaml
+---
+mcc: '208'
+mnc: '93'
+tac: '7'
+---
+
+sudo nano resources/gnb.yaml
+"change you AMF POD IP on address amfConfigs section" , then
+
+helm -n open5gs install -f values.yaml ueransim ./
+```
 
 ## Component Description
 ```

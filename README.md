@@ -40,7 +40,7 @@ tac: '7'
 ---
 
 sudo nano resources/gnb.yaml
-"change you AMF POD IP on address amfConfigs section" , then
+"change AMF POD IP on address amfConfigs section with your AMF POD IP {kubectl get pod -o wide -n open5gs | grep amf}" , then
 
 helm -n open5gs install -f values.yaml ueransim ./
 ```
